@@ -1,0 +1,362 @@
+
+/* ==============================
+   GLOBAL STYLES
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.app-container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 35px auto;
+}
+
+/* ==============================
+   HEADER
+============================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e8edf5;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #172554;
+}
+
+header p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* ==============================
+   CONTROL PANEL
+============================== */
+
+.control-panel {
+    background: #ffffff;
+    margin-top: 25px;
+    padding: 28px;
+    border-radius: 16px;
+
+    border: 1px solid #e8edf5;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+}
+
+.control-panel h2,
+.caption-section > h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+    color: #172554;
+}
+
+/* ==============================
+   LANGUAGE SELECTION
+============================== */
+
+.language-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.language-controls label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.language-controls select {
+    width: 100%;
+    padding: 13px 15px;
+
+    border: 1px solid #dbe3ef;
+    border-radius: 10px;
+
+    background: #f8fafc;
+    color: #1e293b;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.language-controls select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+/* ==============================
+   TRANSLATION MODES
+============================== */
+
+.mode-controls {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 14px 18px;
+
+    border: 1px solid #dbe3ef;
+    border-radius: 10px;
+
+    background: #f8fafc;
+    color: #334155;
+
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.mode-btn:hover {
+    border-color: #6366f1;
+    background: #eef2ff;
+}
+
+.mode-btn.active {
+    background: #312e81;
+    color: #ffffff;
+    border-color: #312e81;
+}
+
+/* ==============================
+   START / STOP BUTTONS
+============================== */
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.action-buttons button {
+    padding: 13px 24px;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.start-btn {
+    background: #4f46e5;
+    color: #ffffff;
+}
+
+.start-btn:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+.stop-btn {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.stop-btn:hover {
+    background: #fecaca;
+}
+
+/* ==============================
+   STATUS
+============================== */
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+    padding: 12px 15px;
+
+    background: #f8fafc;
+    border-radius: 9px;
+
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#statusDot {
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+
+    background: #94a3b8;
+    border-radius: 50%;
+}
+
+/* ==============================
+   CAPTIONS SECTION
+============================== */
+
+.caption-section {
+    margin-top: 30px;
+}
+
+.caption-section > h2 {
+    margin-bottom: 18px;
+}
+
+/* Original and translated caption cards */
+
+.caption-card {
+    background: #ffffff;
+    padding: 23px;
+    margin-bottom: 18px;
+
+    min-height: 150px;
+
+    border: 1px solid #e8edf5;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.035);
+}
+
+.caption-card h3,
+.transcript-card h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: #334155;
+}
+
+.caption-card p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #64748b;
+    overflow-wrap: anywhere;
+}
+
+.original-card {
+    border-left: 5px solid #64748b;
+}
+
+.translated-card {
+    border-left: 5px solid #6366f1;
+}
+
+#liveCaption {
+    color: #3730a3;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ==============================
+   FULL TRANSCRIPT
+============================== */
+
+.transcript-card {
+    background: #ffffff;
+    padding: 23px;
+    margin-top: 5px;
+
+    min-height: 160px;
+
+    border: 1px solid #e8edf5;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.035);
+}
+
+#translatedText {
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.8;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    padding: 18px;
+
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 700px) {
+
+    .app-container {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 22px 16px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .control-panel {
+        padding: 20px;
+    }
+
+    .language-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .mode-controls {
+        flex-direction: column;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-buttons button {
+        width: 100%;
+    }
+
+    .caption-card,
+    .transcript-card {
+        padding: 18px;
+    }
+}
